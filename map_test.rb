@@ -18,7 +18,7 @@ class MapTest < Minitest::Test
   # test Nevada City on index cities[0] which it has an array of connections
   # has a connection at connections[0] index connected with Angels Camp
   def test_nevada_connections
-    map = Map.new
+    map = Map.new 15
     # checking connection by name
     assert_equal 'Angels Camp', map.cities[0].connections[0].name
     # checking connection by ID of Angel Camp
@@ -28,7 +28,7 @@ class MapTest < Minitest::Test
   # test Angel camp city in index @cities[1] has an array of connections
   # with Nevada, Sutter Creek and Virginia City.
   def test_angel_camp_connections
-    map = Map.new
+    map = Map.new 15
     # checking if Angel camp on index @cities[1]
     # is connected with......
     #

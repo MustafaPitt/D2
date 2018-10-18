@@ -2,7 +2,11 @@ require_relative 'city'
 # Map class is is using city object to a create an array of cities
 # and connect them other cities
 class Map
-  NUM_CITIES = 6
+  # define a constant variables. NUM_CITIES = the total number of
+  # cities in the map and pass that constant to the array @cities
+  #
+  NUM_CITIES = 7
+
   # Initialize map with array @cities contains objects of class
   # city and save them as the following
   # @cities[0] = Nevada City
@@ -12,15 +16,16 @@ class Map
   # @cities[4] = Coloma
   # @cities[5] = midas
   # @cities[6] = El Dorado Canyon
-  def initialize
+  #
+  def initialize(seed)
     @cities = Array.new(NUM_CITIES)
-    @cities[0]  = City.new('Nevada City', 0)
-    @cities[1]  = City.new('Angels Camp', 1)
-    @cities[2]  = City.new('Sutter Creek', 2)
-    @cities[3]  = City.new('Virginia City', 3)
-    @cities[4]  = City.new('Coloma', 4)
-    @cities[5]  = City.new('Midas', 5)
-    @cities[6]  = City.new('El Dorado Canyon', 6)
+    @cities[0]  = City.new('Nevada City', 0, seed)
+    @cities[1]  = City.new('Angels Camp', 1, seed)
+    @cities[2]  = City.new('Sutter Creek', 2, seed)
+    @cities[3]  = City.new('Virginia City', 3, seed)
+    @cities[4]  = City.new('Coloma', 4, seed)
+    @cities[5]  = City.new('Midas', 5, seed)
+    @cities[6]  = City.new('El Dorado Canyon', 6, seed)
     connect_cities @cities
   end
 
@@ -50,8 +55,11 @@ class Map
   # print all cities by passing the array of cities which contain the references
   # of all cities classes
   def print_map
+    puts 'Location     | Max Silver | Max Gold'
+    puts '------------------------------------'
     @cities.length.times do |i|
       @cities[i].to_s
+      puts
     end
   end
 
