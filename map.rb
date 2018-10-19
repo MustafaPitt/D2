@@ -55,8 +55,8 @@ class Map
   # print all cities by passing the array of cities which contain the references
   # of all cities classes
   def print_map
-    puts 'Location     | Max Silver | Max Gold'
-    puts '------------------------------------'
+    puts 'Location           | Max Silver    | Max Gold'
+    puts '----------------------------------------------'
     @cities.length.times do |i|
       @cities[i].to_s
       puts

@@ -30,7 +30,6 @@ class City
 
   def initialize(name, id, seed)
     # call srand with the passed seed
-    srand(seed)
     @name = name
     @id = id
     # each instance of city has an array of connection cities, basically each
@@ -45,7 +44,8 @@ class City
   end
 
   def to_s
-    print "#{name}         #{@max_sliver}             #{@max_gold}"
+    print "#{name}   |\t#{@max_sliver}\t   | \t#{@max_gold}"
+    puts
   end
 
   # Add a references to connection array
@@ -58,16 +58,25 @@ class City
   # @return [Max Gold]
   # @param [city id] id
   # @param [seed] seed
+
   def gen_ran_gold(seed, id)
+
+    prng = Random.new seed
+
     # if city id = 0 = Nevada City
-    return (srand(seed).to_i % (5 + 1)) if id.zero?
+    # return max number between 0 and 5
+    return prng.rand(5 + 1) if id.zero?
+
     # if city id = 1 = Angels Camp
-    return (srand(seed).to_i % (4 + 1)) if id == 1
+    return prng.rand(4 + 1) if id == 1
+
     # if city id = 2 = Sutter Creek
-    return (srand(seed).to_i % (2 + 1)) if id == 2
+    return prng.rand(2 + 1) if id == 2
+
     # if city id = 3 = Virginia City or
     # city id = 4 = Coloma
-    return (srand(seed).to_i % (3 + 1)) if id.between?(3, 4)
+
+    return prng.rand (3 + 1) if id.between?(3, 4)
     # if city id = 5 = Midas or
     # if city id = 6 = El Dorado Canyon
     return 0 if id.between?(5, 6)
@@ -75,22 +84,25 @@ class City
     print 'Error index ID not found in the System \n'
   end
 
+
   # return a random number up to the max of silver in city according to
   # D2 requirement
   # @return [Max Gold]
   # @param [Object] id
   def gen_ran_silver(seed, id)
+    prng = Random.new(seed)
+
     # if city id = 0 = Nevada City
     # if city id = 1 = Angels Camp
     # if city id = 2 = Sutter Creek
     # # if city id = 4 = Coloma
     return 0 if id.between?(0, 2) || id == 4
     # if city id = 3 = Virginia City
-    return (srand(seed).to_i % (3 + 1)) if id == 3
+    return prng.rand(3 + 1) if id == 3
     # if city id = 5 = Midas
-    return (srand(seed).to_i % (5 + 1)) if id == 5
+    return prng.rand(5 + 1) if id == 5
     # if city id = 6 = El Dorado Canyon
-    return srand(seed).to_i % (10 + 1) if id == 6
+    return prng.rand(10 + 1) if id == 6
 
     print 'Error index ID not found in the System \n'
   end

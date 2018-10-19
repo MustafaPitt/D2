@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-17T21:02:29-04:00">2018-10-17T21:02:29-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-19T12:41:49-04:00">2018-10-19T12:41:49-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">86.49%</span></span>
+    (<span class="covered_percent"><span class="red">69.28%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.79
+         2.38
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>4</b> files in total.
-    <b>111</b> relevant lines. 
-    <span class="green"><b>96</b> lines covered</span> and
-    <span class="red"><b>15</b> lines missed </span>
+    <b>5</b> files in total.
+    <b>166</b> relevant lines. 
+    <span class="green"><b>115</b> lines covered</span> and
+    <span class="red"><b>51</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,22 +52,22 @@
       
       <tr>
         <td class="strong"><a href="#7fe38dbc9fe31aa5a92a5aee4df257912f50e58f" class="src_link" title="city.rb">city.rb</a></td>
-        <td class="yellow strong">90.0 %</td>
-        <td>97</td>
-        <td>30</td>
-        <td>27</td>
-        <td>3</td>
-        <td>7.0</td>
+        <td class="yellow strong">87.5 %</td>
+        <td>109</td>
+        <td>32</td>
+        <td>28</td>
+        <td>4</td>
+        <td>8.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#8754caa8464c55782cf1303f1dfc511e2d5487b1" class="src_link" title="city_test.rb">city_test.rb</a></td>
-        <td class="red strong">50.0 %</td>
+        <td class="red strong">44.19 %</td>
+        <td>78</td>
+        <td>43</td>
+        <td>19</td>
         <td>24</td>
-        <td>14</td>
-        <td>7</td>
-        <td>7</td>
-        <td>0.5</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
@@ -90,6 +90,16 @@
         <td>1.0</td>
       </tr>
       
+      <tr>
+        <td class="strong"><a href="#6a122c0d8f0f86bdbd73c0b1f1802120cc64d205" class="src_link" title="prospector.rb">prospector.rb</a></td>
+        <td class="red strong">25.0 %</td>
+        <td>78</td>
+        <td>24</td>
+        <td>6</td>
+        <td>18</td>
+        <td>0.3</td>
+      </tr>
+      
     </tbody>
   </table>
 </div>
@@ -109,11 +119,11 @@
         <div class="source_table" id="7fe38dbc9fe31aa5a92a5aee4df257912f50e58f">
   <div class="header">
     <h3>city.rb</h3>
-    <h4><span class="yellow">90.0 %</span> covered</h4>
+    <h4><span class="yellow">87.5 %</span> covered</h4>
     <div>
-      <b>30</b> relevant lines. 
-      <span class="green"><b>27</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>32</b> relevant lines. 
+      <span class="green"><b>28</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -312,100 +322,100 @@
           <code class="ruby">    # call srand with the passed seed</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="33">
-          <span class="hits">15</span>
-          
-          <code class="ruby">    srand(seed)</code>
-        </li>
-      
-        <li class="covered" data-hits="15" data-linenumber="34">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="20" data-linenumber="33">
+          <span class="hits">20</span>
           
           <code class="ruby">    @name = name</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="35">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="20" data-linenumber="34">
+          <span class="hits">20</span>
           
           <code class="ruby">    @id = id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">    # each instance of city has an array of connection cities, basically each</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">    # index contains a reference to another city class that prospector can</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">    # travel to. For example, Sutter Creek city contain 2 connections,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">    # connections[0] = the reference of Angles camp and connections[1] =</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">    # reference of Coloma</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="41">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="20" data-linenumber="40">
+          <span class="hits">20</span>
           
           <code class="ruby">    @connections = []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">    # Set the max random number of gold or silver based on D 2 requirement</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="43">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="20" data-linenumber="42">
+          <span class="hits">20</span>
           
           <code class="ruby">    @max_gold = gen_ran_gold seed, id</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="44">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="20" data-linenumber="43">
+          <span class="hits">20</span>
           
           <code class="ruby">    @max_sliver = gen_ran_silver seed, id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
           <code class="ruby">  def to_s</code>
         </li>
       
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
+          
+          <code class="ruby">    print &quot;#{name}   |\t#{@max_sliver}\t   | \t#{@max_gold}&quot;</code>
+        </li>
+      
         <li class="missed" data-hits="0" data-linenumber="48">
           
           
-          <code class="ruby">    print &quot;#{name}         #{@max_sliver}             #{@max_gold}&quot;</code>
+          <code class="ruby">    puts</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
@@ -480,202 +490,202 @@
           <code class="ruby">  # @param [seed] seed</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
           <code class="ruby">  def gen_ran_gold(seed, id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">    # if city id = 0 = Nevada City</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="63">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="20" data-linenumber="64">
+          <span class="hits">20</span>
           
-          <code class="ruby">    return (srand(seed).to_i % (5 + 1)) if id.zero?</code>
+          <code class="ruby">    prng = Random.new seed</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">    # if city id = 1 = Angels Camp</code>
-        </li>
-      
-        <li class="covered" data-hits="12" data-linenumber="65">
-          <span class="hits">12</span>
-          
-          <code class="ruby">    return (srand(seed).to_i % (4 + 1)) if id == 1</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby">    # if city id = 2 = Sutter Creek</code>
+          <code class="ruby">    # if city id = 0 = Nevada City</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="67">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="67">
           
-          <code class="ruby">    return (srand(seed).to_i % (2 + 1)) if id == 2</code>
+          
+          <code class="ruby">    # return max number between 0 and 5</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="covered" data-hits="20" data-linenumber="68">
+          <span class="hits">20</span>
           
-          
-          <code class="ruby">    # if city id = 3 = Virginia City or</code>
+          <code class="ruby">    return prng.rand(5 + 1) if id.zero?</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby">    # city id = 4 = Coloma</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="70">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    return (srand(seed).to_i % (3 + 1)) if id.between?(3, 4)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="71">
-          
-          
-          <code class="ruby">    # if city id = 5 = Midas or</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="72">
-          
-          
-          <code class="ruby">    # if city id = 6 = El Dorado Canyon</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="73">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    return 0 if id.between?(5, 6)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="74">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="75">
-          
-          
-          <code class="ruby">    print &#39;Error index ID not found in the System \n&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="76">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="77">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
-          <code class="ruby">  # return a random number up to the max of silver in city according to</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="79">
-          
-          
-          <code class="ruby">  # D2 requirement</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
-          <code class="ruby">  # @return [Max Gold]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="81">
-          
-          
-          <code class="ruby">  # @param [Object] id</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="82">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def gen_ran_silver(seed, id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="83">
-          
-          
-          <code class="ruby">    # if city id = 0 = Nevada City</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="never" data-hits="" data-linenumber="70">
           
           
           <code class="ruby">    # if city id = 1 = Angels Camp</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="covered" data-hits="16" data-linenumber="71">
+          <span class="hits">16</span>
+          
+          <code class="ruby">    return prng.rand(4 + 1) if id == 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
           
           
           <code class="ruby">    # if city id = 2 = Sutter Creek</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="covered" data-hits="13" data-linenumber="74">
+          <span class="hits">13</span>
           
-          
-          <code class="ruby">    # # if city id = 4 = Coloma</code>
+          <code class="ruby">    return prng.rand(2 + 1) if id == 2</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="87">
-          <span class="hits">15</span>
+        <li class="never" data-hits="" data-linenumber="75">
           
-          <code class="ruby">    return 0 if id.between?(0, 2) || id == 4</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">    # if city id = 3 = Virginia City</code>
+          <code class="ruby">    # if city id = 3 = Virginia City or</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="89">
-          <span class="hits">6</span>
+        <li class="never" data-hits="" data-linenumber="77">
           
-          <code class="ruby">    return (srand(seed).to_i % (3 + 1)) if id == 3</code>
+          
+          <code class="ruby">    # city id = 4 = Coloma</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="78">
           
           
-          <code class="ruby">    # if city id = 5 = Midas</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="91">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="10" data-linenumber="79">
+          <span class="hits">10</span>
           
-          <code class="ruby">    return (srand(seed).to_i % (5 + 1)) if id == 5</code>
+          <code class="ruby">    return prng.rand (3 + 1) if id.between?(3, 4)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">    # if city id = 5 = Midas or</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">    # if city id = 6 = El Dorado Canyon</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="93">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="82">
+          <span class="hits">4</span>
           
-          <code class="ruby">    return srand((seed).to_i % (10 + 1)) if id == 6</code>
+          <code class="ruby">    return 0 if id.between?(5, 6)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="84">
+          
+          
+          <code class="ruby">    print &#39;Error index ID not found in the System \n&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">  # return a random number up to the max of silver in city according to</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">  # D2 requirement</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">  # @return [Max Gold]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">  # @param [Object] id</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def gen_ran_silver(seed, id)</code>
+        </li>
+      
+        <li class="covered" data-hits="20" data-linenumber="93">
+          <span class="hits">20</span>
+          
+          <code class="ruby">    prng = Random.new(seed)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="94">
@@ -684,19 +694,91 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="95">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby">    print &#39;Error index ID not found in the System \n&#39;</code>
+          <code class="ruby">    # if city id = 0 = Nevada City</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    # if city id = 1 = Angels Camp</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">    # if city id = 2 = Sutter Creek</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">    # # if city id = 4 = Coloma</code>
+        </li>
+      
+        <li class="covered" data-hits="20" data-linenumber="99">
+          <span class="hits">20</span>
+          
+          <code class="ruby">    return 0 if id.between?(0, 2) || id == 4</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">    # if city id = 3 = Virginia City</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="101">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    return prng.rand(3 + 1) if id == 3</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">    # if city id = 5 = Midas</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="103">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    return prng.rand(5 + 1) if id == 5</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby">    # if city id = 6 = El Dorado Canyon</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="105">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    return prng.rand(10 + 1) if id == 6</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="106">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="107">
+          
+          
+          <code class="ruby">    print &#39;Error index ID not found in the System \n&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
           
           
           <code class="ruby">end</code>
@@ -710,11 +792,11 @@
         <div class="source_table" id="8754caa8464c55782cf1303f1dfc511e2d5487b1">
   <div class="header">
     <h3>city_test.rb</h3>
-    <h4><span class="red">50.0 %</span> covered</h4>
+    <h4><span class="red">44.19 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <b>43</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>24</b> lines missed.</span>
     </div>
   </div>
   
@@ -742,13 +824,13 @@
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby">  # test random method and make sure the values are withing requirements range</code>
+          <code class="ruby">  # test random gold method and make sure the values are withing requirements range</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # We&#39;re checking the method through the global variable @max_gold</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
@@ -757,22 +839,22 @@
           <code class="ruby">  def test_rand_gold</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby">    # test Nevada</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    20.times do |x|</code>
+          <code class="ruby">    20.times do |seed|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">      # test Nevada</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">      nevada = City.new(&#39;Nevada City&#39;, 0, x)</code>
+          <code class="ruby">      nevada = City.new(&#39;Nevada City&#39;, 0, seed)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
@@ -790,76 +872,400 @@
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">      # angel city has max gold between 0 to 4</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">      # generate seed from 0 to 20 and test the max</code>
+          <code class="ruby">      # angel city has max gold between 0 to 4</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">      # gold will stay between 0 and 4</code>
+          <code class="ruby">      # generate seed from 0 to 20 and test the max</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">      angels = City.new(&#39;Angels Camp&#39;, 1, x)</code>
+          <code class="ruby">      # gold will stay between 0 and 4</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">      assert_operator 4, :&lt;=, angels.max_gold</code>
+          <code class="ruby">      angels = City.new(&#39;Angels Camp&#39;, 1, seed)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="17">
           
           
+          <code class="ruby">      assert_operator 4, :&lt;=, angels.max_gold</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
           <code class="ruby">      assert_operator 0, :&gt;=, angels.max_gold</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">      # Coloma gold max gold should be between 0 and 3</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="missed" data-hits="0" data-linenumber="21">
           
           
-          <code class="ruby">      coloma = City.new(&#39;Angels Camp&#39;, 1, x)</code>
+          <code class="ruby">      coloma = City.new(&#39;Coloma&#39;, 4, seed)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="22">
           
           
           <code class="ruby">      assert_operator 3, :&lt;=, coloma.max_gold</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="23">
           
           
           <code class="ruby">      assert_operator 0, :&gt;=, coloma.max_gold</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">      # Sulter Creek max gold should be between 0 and 2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
+          
+          <code class="ruby">      sultter = City.new(&#39;Sutter Creek&#39;, 2, seed)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">      assert_operator 2, :&lt;=, sultter.max_gold</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">      assert_operator 0, :&gt;=, sultter.max_gold</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">      # Virginia City should be betweeb 0 and 3</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">      virginia = City.new(&#39;Virginia City&#39;, 3, seed)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="32">
+          
+          
+          <code class="ruby">      assert_operator 2, :&lt;=, virginia.max_gold</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
+          
+          <code class="ruby">      assert_operator 0, :&gt;=, virginia.max_gold</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">      #  Midas and El Dorado Canyon will return 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">      eldrado = City.new(&#39;El Dorado Canyon&#39;, 6, seed)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">      assert_equal 0, eldrado.max_gold</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">      midas = City.new(&#39;Midas&#39;, 5, seed)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">      assert_equal 0, midas.max_gold</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">  # test random silver method and make sure the values are withing requirements</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">  # range. We&#39;re checking the method through the global variable @max_silver</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def test_rand_silver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">    # Sutter Creek, Coloma, Angels Camp, Nevada City and Nevada City</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    # has max_silver = 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    30.times do |seed|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sultter = City.new(&#39;Sutter Creek&#39;, 2, seed)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      assert_equal 0, sultter.max_sliver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      coloma = City.new(&#39;Coloma&#39;, 4, seed)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      assert_equal 0, coloma.max_sliver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      angels = City.new(&#39;Angels Camp&#39;, 1, seed)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      assert_equal 0, angels.max_sliver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      nevada = City.new(&#39;Nevada City&#39;, 0, seed)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      assert_equal 0, nevada.max_sliver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">      # Virginia City, max silver is 3</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      virginia = City.new(&#39;Virginia City&#39;, 3, seed)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      assert_operator 3, :&lt;=, virginia.max_sliver</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="65">
+          
+          
+          <code class="ruby">      assert_operator 0, :&gt;=, virginia.max_sliver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">      # Midas City, Max silver is 5</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="68">
+          
+          
+          <code class="ruby">      midas = City.new(&#39;Midas&#39;, 5, seed)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="69">
+          
+          
+          <code class="ruby">      assert_operator 5, :&lt;=, midas.max_sliver</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">      assert_operator 0, :&gt;=, midas.max_sliver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">      # El Dorado, max silver is 10</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="73">
+          
+          
+          <code class="ruby">      eldrado = City.new(&#39;El Dorado Canyon&#39;, 6, seed)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="74">
+          
+          
+          <code class="ruby">      assert_operator 10, :&lt;=, eldrado.max_sliver</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="75">
+          
+          
+          <code class="ruby">      assert_operator 0, :&gt;=, eldrado.max_sliver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby">end</code>
@@ -1229,13 +1635,13 @@
         <li class="missed" data-hits="0" data-linenumber="58">
           
           
-          <code class="ruby">    puts &#39;Location     | Max Silver | Max Gold&#39;</code>
+          <code class="ruby">    puts &#39;Location           | Max Silver    | Max Gold&#39;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="59">
           
           
-          <code class="ruby">    puts &#39;------------------------------------&#39;</code>
+          <code class="ruby">    puts &#39;----------------------------------------------&#39;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="60">
@@ -1894,6 +2300,493 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="6a122c0d8f0f86bdbd73c0b1f1802120cc64d205">
+  <div class="header">
+    <h3>prospector.rb</h3>
+    <h4><span class="red">25.0 %</span> covered</h4>
+    <div>
+      <b>24</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>18</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># In class prospective, we will keep using map and cities</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"># the prospective should visit theses randomly</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">#    City ID Codes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">#    @cities[0] = Nevada City</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">#    @cities[1] = Angels Camp</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">#    @cities[2] = Sutter Creek</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">#    @cities[3] = Virginia City</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">#    @cities[4] = Coloma</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">#    @cities[5] = midas</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">#    @cities[6] = El Dorado Canyon</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">#</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Prospector</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  # @return [max_pros]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :pros_id</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  # the prospector has leave the city if it&#39;s true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :has_to_leave</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(num, seed)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">    @pros_id = num</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">    @id = 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">    @has_to_leave = false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    # create a map so the prospector can access to the cities</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">    map = Map. new seed</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    # Total silver and total gold is to trace the total amount of metals</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    # that prospector can earn</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="32">
+          
+          
+          <code class="ruby">    @total_silver = 0</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
+          
+          <code class="ruby">    @total_gold = 0</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
+          
+          <code class="ruby">    start map.cities[2], @pros_id</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  # start method will put the prospector with his id in the first city the</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">  # prospector should visit which it  Sutter Creek</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def start(city, pros_id)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">    print &quot;Prospector #{pros_id} starting in #{city}.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def search_for_gold_or_silver(city, max_gold, max_silver)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">    # checking if there is no gold or silver in the city</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    # if no gold or silver found then the prospector has</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">    # to leave. return has_to_leave as true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    # case 1 when there is no gold and silver</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
+          
+          <code class="ruby">    if max_gold.zero? &amp;&amp; max_silver.zero?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
+          
+          <code class="ruby">      print &quot;	Found no precious metals in #{city}.&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
+          
+          <code class="ruby">      has_to_leave = true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
+          
+          <code class="ruby">      return has_to_leave</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">    # case 2: checking if there is gold, but no silver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="57">
+          
+          
+          <code class="ruby">    if !max_gold.zero? &amp;&amp; max_silver.zero?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">      # print if it singular</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">      #</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="60">
+          
+          
+          <code class="ruby">      print &quot;Found 1 ounce of gold in #{city}.&quot; if max_gold == 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">      # print if it plural</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">      #</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="63">
+          
+          
+          <code class="ruby">      print &quot;Found #{max_gold} ounces of gold in #{city}.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">    # case 3: if there is silver, but no gold</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="68">
+          
+          
+          <code class="ruby">    if !max_silver.zero? &amp;&amp; max_gold.zero?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">      # print if it singular</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">      print &quot;Found 1 ounce of silver in #{city}.&quot; if max_silver == 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">      # print if it plural</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="73">
+          
+          
+          <code class="ruby">      print &quot;Found #{max_silver} ounces of silver in #{city}.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">    # case 4: if there gold and silver</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby">end</code>
