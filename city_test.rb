@@ -3,76 +3,72 @@ require_relative 'city'
 class CityTest < Minitest::Test
   # test random gold method and make sure the values are withing requirements range
   # We're checking the method through the global variable @max_gold
-  def test_rand_gold
-    20.times do |seed|
-      # test Nevada
-      nevada = City.new('Nevada City', 0, seed)
-      assert_operator 5, :<=, nevada.max_gold
-      assert_operator 0, :>=, nevada.max_gold
+  #
+  #
+  def test_max_gold
 
-      # angel city has max gold between 0 to 4
-      # generate seed from 0 to 20 and test the max
-      # gold will stay between 0 and 4
-      angels = City.new('Angels Camp', 1, seed)
-      assert_operator 4, :<=, angels.max_gold
-      assert_operator 0, :>=, angels.max_gold
+    # test Nevada
+    # Max gold should be 5
+    nevada = City.new('Nevada City', 0)
+    assert_equal 5, nevada.max_gold
 
-      # Coloma gold max gold should be between 0 and 3
-      coloma = City.new('Coloma', 4, seed)
-      assert_operator 3, :<=, coloma.max_gold
-      assert_operator 0, :>=, coloma.max_gold
+    # angel city has max gold 4
+    #
+    angels = City.new('Angels Camp', 1)
+    assert_equal 4, angels.max_gold
+    #
+    #
+    # Coloma has max gold 3
+    #
+    coloma = City.new('Coloma', 4)
+    assert_equal 3, coloma.max_gold
 
-      # Sulter Creek max gold should be between 0 and 2
-      sultter = City.new('Sutter Creek', 2, seed)
-      assert_operator 2, :<=, sultter.max_gold
-      assert_operator 0, :>=, sultter.max_gold
+    # Sulter Creek has max gold 2
+    sultter = City.new('Sutter Creek', 2)
+    assert_equal 2, sultter.max_gold
 
-      # Virginia City should be betweeb 0 and 3
-      virginia = City.new('Virginia City', 3, seed)
-      assert_operator 2, :<=, virginia.max_gold
-      assert_operator 0, :>=, virginia.max_gold
-      #  Midas and El Dorado Canyon will return 0
+    # Virginia City has max gold 3
+    virginia = City.new('Virginia City', 3)
+    assert_equal 3, virginia.max_gold
 
-      eldrado = City.new('El Dorado Canyon', 6, seed)
-      assert_equal 0, eldrado.max_gold
-      midas = City.new('Midas', 5, seed)
-      assert_equal 0, midas.max_gold
-    end
+    #  Midas and El Dorado Canyon has max gold 0
+
+    eldrado = City.new('El Dorado Canyon', 6)
+    assert_equal 0, eldrado.max_gold
+    midas = City.new('Midas', 5)
+    assert_equal 0, midas.max_gold
   end
 
-  # test random silver method and make sure the values are withing requirements
-  # range. We're checking the method through the global variable @max_silver
-  def test_rand_silver
+  # test max silver method and make sure the values are within D2 requirements
+  # We're checking the method through the global variable @max_silver
+
+  def test_max_silver
     # Sutter Creek, Coloma, Angels Camp, Nevada City and Nevada City
     # has max_silver = 0
 
-    30.times do |seed|
-      sultter = City.new('Sutter Creek', 2, seed)
-      assert_equal 0, sultter.max_sliver
 
-      coloma = City.new('Coloma', 4, seed)
-      assert_equal 0, coloma.max_sliver
+    sultter = City.new('Sutter Creek', 2)
+    assert_equal 0, sultter.max_sliver
 
-      angels = City.new('Angels Camp', 1, seed)
-      assert_equal 0, angels.max_sliver
+    coloma = City.new('Coloma', 4)
+    assert_equal 0, coloma.max_sliver
 
-      nevada = City.new('Nevada City', 0, seed)
-      assert_equal 0, nevada.max_sliver
+    angels = City.new('Angels Camp', 1)
+    assert_equal 0, angels.max_sliver
 
-      # Virginia City, max silver is 3
-      virginia = City.new('Virginia City', 3, seed)
-      assert_operator 3, :<=, virginia.max_sliver
-      assert_operator 0, :>=, virginia.max_sliver
+    nevada = City.new('Nevada City', 0)
+    assert_equal 0, nevada.max_sliver
 
-      # Midas City, Max silver is 5
-      midas = City.new('Midas', 5, seed)
-      assert_operator 5, :<=, midas.max_sliver
-      assert_operator 0, :>=, midas.max_sliver
+    # Virginia City, max silver is 3
+    virginia = City.new('Virginia City', 3)
+    assert_equal 3, virginia.max_sliver
 
-      # El Dorado, max silver is 10
-      eldrado = City.new('El Dorado Canyon', 6, seed)
-      assert_operator 10, :<=, eldrado.max_sliver
-      assert_operator 0, :>=, eldrado.max_sliver
-    end
+    # Midas City, Max silver is 5
+    midas = City.new('Midas', 5)
+    assert_equal 5, midas.max_sliver
+
+    # El Dorado, max silver is 10
+    eldrado = City.new('El Dorado Canyon', 6)
+    assert_equal 10, eldrado.max_sliver
   end
 end

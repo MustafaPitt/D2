@@ -28,7 +28,8 @@ class City
   # @return [@max_silver]
   attr_reader :max_sliver
 
-  def initialize(name, id, seed)
+
+  def initialize(name, id)
     # call srand with the passed seed
     @name = name
     @id = id
@@ -39,8 +40,8 @@ class City
     # reference of Coloma
     @connections = []
     # Set the max random number of gold or silver based on D 2 requirement
-    @max_gold = gen_ran_gold seed, id
-    @max_sliver = gen_ran_silver seed, id
+    @max_gold = get_max_gold id
+    @max_sliver = get_max_silver id
   end
 
   def to_s
@@ -53,56 +54,82 @@ class City
     connections.push value
   end
 
-  # return a random number up to the max of gold in city according to
-  # D2 requirement
+  # return a max gold number according to D2 requirement for each city
+  #
+  #
   # @return [Max Gold]
-  # @param [city id] id
-  # @param [seed] seed
 
-  def gen_ran_gold(seed, id)
-
-    prng = Random.new seed
-
+  def get_max_gold(id)
+    #
+    #
     # if city id = 0 = Nevada City
-    # return max number between 0 and 5
-    return prng.rand(5 + 1) if id.zero?
-
+    # return max gold 5
+    return 5 if id.zero?
+    #
+    #
     # if city id = 1 = Angels Camp
-    return prng.rand(4 + 1) if id == 1
-
+    # return max gold 4
+    return 4 if id == 1
+    #
+    #
     # if city id = 2 = Sutter Creek
-    return prng.rand(2 + 1) if id == 2
-
+    # return max gold 2
+    return 2 if id == 2
+    #
+    #
     # if city id = 3 = Virginia City or
     # city id = 4 = Coloma
-
-    return prng.rand (3 + 1) if id.between?(3, 4)
+    # return max gold 3
+    #
+    #
+    return 3 if id.between?(3, 4)
+    #
+    #
     # if city id = 5 = Midas or
     # if city id = 6 = El Dorado Canyon
+    # return max gold 0
+    #
     return 0 if id.between?(5, 6)
 
     print 'Error index ID not found in the System \n'
   end
 
-
-  # return a random number up to the max of silver in city according to
+  # return the max number  of silver in city according to
   # D2 requirement
-  # @return [Max Gold]
-  # @param [Object] id
-  def gen_ran_silver(seed, id)
-    prng = Random.new(seed)
-
+  #
+  #
+  # @return [max_silver]
+  #
+  def get_max_silver(id)
+    #
+    #
     # if city id = 0 = Nevada City
     # if city id = 1 = Angels Camp
     # if city id = 2 = Sutter Creek
     # # if city id = 4 = Coloma
+    # return max silver 0
+    #
+    #
     return 0 if id.between?(0, 2) || id == 4
+    #
     # if city id = 3 = Virginia City
-    return prng.rand(3 + 1) if id == 3
+    # return max silver 3
+    #
+    #
+    return 3 if id == 3
+    #
     # if city id = 5 = Midas
-    return prng.rand(5 + 1) if id == 5
+    # return max silver 5
+    #
+    #
+    return 5 if id == 5
+    #
+    #
     # if city id = 6 = El Dorado Canyon
-    return prng.rand(10 + 1) if id == 6
+    # return max silver 10
+    #
+    #
+    return 10 if id == 6
 
     print 'Error index ID not found in the System \n'
   end

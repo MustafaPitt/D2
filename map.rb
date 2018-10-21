@@ -17,15 +17,15 @@ class Map
   # @cities[5] = midas
   # @cities[6] = El Dorado Canyon
   #
-  def initialize(seed)
+  def initialize()
     @cities = Array.new(NUM_CITIES)
-    @cities[0]  = City.new('Nevada City', 0, seed)
-    @cities[1]  = City.new('Angels Camp', 1, seed)
-    @cities[2]  = City.new('Sutter Creek', 2, seed)
-    @cities[3]  = City.new('Virginia City', 3, seed)
-    @cities[4]  = City.new('Coloma', 4, seed)
-    @cities[5]  = City.new('Midas', 5, seed)
-    @cities[6]  = City.new('El Dorado Canyon', 6, seed)
+    @cities[0]  = City.new('Nevada City', 0)
+    @cities[1]  = City.new('Angels Camp', 1)
+    @cities[2]  = City.new('Sutter Creek', 2)
+    @cities[3]  = City.new('Virginia City', 3)
+    @cities[4]  = City.new('Coloma', 4)
+    @cities[5]  = City.new('Midas', 5)
+    @cities[6]  = City.new('El Dorado Canyon', 6)
     connect_cities @cities
   end
 
