@@ -17,8 +17,7 @@ class Prospector
   attr_reader :pros_id
 
   # the prospector has leave the city if it's true
-  #
-  attr_reader :has_to_leave
+
 
   # @return [current_city]
   attr_reader :current_city
@@ -33,11 +32,10 @@ class Prospector
 
   attr_writer :current_city
 
-  attr_writer :has_to_leave
-
   attr_reader :count_days
 
-  attr_accessor :city_id
+  attr_accessor :has_to_leave
+
 
   def initialize(id, prng)
     @has_to_leave = false
@@ -51,13 +49,12 @@ class Prospector
     @t_gold = 0
     @prng = prng
 
+    # is the current city that prospector in
+    @current_city = nil
+
     # save and truck number of visited city
     @visited_num = 0
-    # is the current city that prospector in
-    @current_city = 'Sutter Creek'
     # city id of sutter Creek is 2
-    @city_id = 2
-
     @count_days = 0
 
   end
@@ -85,7 +82,7 @@ class Prospector
   # when there is no gold or silver ==> when  both are equal 0
   # this method for the first 3 irritation
 
-  def get_msg_search__first_3_ir(city, gold, silver)
+  def get_msg_search_first_3_ir(city, gold, silver)
     #
     # case 1 when there is no gold and silver
     # the method will print Found no precious metals in #{city}."
@@ -127,38 +124,14 @@ class Prospector
   #
   def search_for_gold_or_silver_final_2(city, gold, silver)
     #
-    # case 1 when gold <= 1 and silver <= 2
-    #
+    # when gold <= 1 and silver <= 2
     # set has to leave as true
-    #
-    if gold <= 1 && silver <= 2
-      # this method will print the apropriate message and
-      # return has to leave as a true
-      @has_to_leave = true
-      # it will return a string message based on gold and silver parameters
+    @has_to_leave = true if gold <= 1 && silver <= 2
       # contains the the amount of metals found
       return handle_and_get_final_2_msg city, gold, silver
-    end
-    #
-    # case 2: checking if there is gold, but no silver
-    # print the appropriated message singular or plural
-    #
-    return get_sing_plur_gold_msg city, gold if !gold.zero? && silver.zero?
-    #
-    # case 3: if there is silver, but no gold
-    # print the appropriated message singular or plural
-    #
-    return get_sing_plur_silver_msg city, silver if gold.zero? && !silver.zero?
-    #
-    # case 4: if there gold and silver
-    return get_sing_plur_silver_gold_msg city, gold, silver if !gold.zero? && !silver.zero?
-
     raise "Error in search for gold or silver\n"
   end
 
-  def print_search_final_2(city, max_gold, max_silver)
-    print search_for_gold_or_silver_final_2(city, max_gold, max_silver)
-  end
 
   # These 2 print methods below simply will print the appropriate message if
   # the sentence singular, it will print with ounce, else it will print ounces
@@ -268,7 +241,7 @@ class Prospector
   end
 
   def move_msg(cur_city, dest_city, g_earned, sil_earned)
-    "Heading from #{cur_city} to #{dest_city}, holding #{g_earned} ounce of gold and #{sil_earned} ounces of silver.\n"
+    "Heading from #{cur_city} to #{dest_city}, holding #{g_earned} ounces of gold and #{sil_earned} ounces of silver.\n"
   end
 
   def collect_metals(gold, silver)

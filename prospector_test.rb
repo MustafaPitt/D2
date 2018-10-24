@@ -43,7 +43,7 @@ class ProspectorTest < Minitest::Test
     Map.new
     max_gold = 0
     max_silver = 0
-    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search_first_3_ir 'Midas', max_gold, max_silver
     expected = "Found no precious metals in Midas.\n"
     assert_equal expected, actual, 'check it should be correct\n'
     assert_equal true, pros.has_to_leave
@@ -59,7 +59,7 @@ class ProspectorTest < Minitest::Test
     pros = Prospector.new id, prng
     max_silver = 0
     max_gold = 1
-    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search_first_3_ir 'Midas', max_gold, max_silver
     expected = "Found 1 ounce of gold in Midas.\n"
     assert_equal expected, actual, 'check it should be correct\n'
   end
@@ -73,7 +73,7 @@ class ProspectorTest < Minitest::Test
     pros = Prospector.new id, seed
     max_silver = 0
     max_gold = 3
-    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search_first_3_ir 'Midas', max_gold, max_silver
     expected = "Found 3 ounces of gold in Midas.\n"
     assert_equal expected, actual
   end
@@ -87,7 +87,7 @@ class ProspectorTest < Minitest::Test
     pros = Prospector.new id, seed
     max_silver = 1
     max_gold = 0
-    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search_first_3_ir 'Midas', max_gold, max_silver
     expected = "Found 1 ounce of silver in Midas.\n"
     assert_equal expected, actual
   end
@@ -101,7 +101,7 @@ class ProspectorTest < Minitest::Test
     pros = Prospector.new id, seed
     max_silver = 3
     max_gold = 0
-    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search_first_3_ir 'Midas', max_gold, max_silver
     expected = "Found 3 ounces of silver in Midas.\n"
     assert_equal expected, actual, 'check it should be correct\n'
   end
@@ -221,4 +221,8 @@ class ProspectorTest < Minitest::Test
     actual = pros.get_ran_silver map.cities[4].id, prng, map.cities[4].max_sliver
     assert_equal 0, actual
   end
+
+
+
+
 end
