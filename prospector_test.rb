@@ -43,7 +43,7 @@ class ProspectorTest < Minitest::Test
     Map.new
     max_gold = 0
     max_silver = 0
-    actual = pros.search_msg_first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
     expected = "Found no precious metals in Midas.\n"
     assert_equal expected, actual, 'check it should be correct\n'
     assert_equal true, pros.has_to_leave
@@ -59,7 +59,7 @@ class ProspectorTest < Minitest::Test
     pros = Prospector.new id, prng
     max_silver = 0
     max_gold = 1
-    actual = pros.search_msg_first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
     expected = "Found 1 ounce of gold in Midas.\n"
     assert_equal expected, actual, 'check it should be correct\n'
   end
@@ -73,7 +73,7 @@ class ProspectorTest < Minitest::Test
     pros = Prospector.new id, seed
     max_silver = 0
     max_gold = 3
-    actual = pros.search_msg_first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
     expected = "Found 3 ounces of gold in Midas.\n"
     assert_equal expected, actual
   end
@@ -87,7 +87,7 @@ class ProspectorTest < Minitest::Test
     pros = Prospector.new id, seed
     max_silver = 1
     max_gold = 0
-    actual = pros.search_msg_first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
     expected = "Found 1 ounce of silver in Midas.\n"
     assert_equal expected, actual
   end
@@ -101,7 +101,7 @@ class ProspectorTest < Minitest::Test
     pros = Prospector.new id, seed
     max_silver = 3
     max_gold = 0
-    actual = pros.search_msg_first_3_ir 'Midas', max_gold, max_silver
+    actual = pros.get_msg_search__first_3_ir 'Midas', max_gold, max_silver
     expected = "Found 3 ounces of silver in Midas.\n"
     assert_equal expected, actual, 'check it should be correct\n'
   end
@@ -128,7 +128,7 @@ class ProspectorTest < Minitest::Test
     prng = Random.new(15)
     pros = Prospector.new 1, prng
     map = Map.new
-    20.times do
+    200.times do
       actual = pros.get_ran_gold map.cities[0].id, prng, map.cities[0].max_gold
       assert_operator 5, :>=, actual
       assert_operator 0, :<=, actual
@@ -140,7 +140,7 @@ class ProspectorTest < Minitest::Test
     prng = Random.new(15)
     pros = Prospector.new 1, prng
     map = Map.new
-    20.times do
+    200.times do
       actual = pros.get_ran_gold map.cities[1].id, prng, map.cities[1].max_gold
       assert_operator 4, :>=, actual
       assert_operator 0, :<=, actual
@@ -152,7 +152,7 @@ class ProspectorTest < Minitest::Test
     prng = Random.new(15)
     pros = Prospector.new 1, prng
     map = Map.new
-    20.times do
+    200.times do
       actual = pros.get_ran_gold map.cities[2].id, prng, map.cities[2].max_gold
       assert_operator 2, :>=, actual
       assert_operator 0, :<=, actual
@@ -164,7 +164,7 @@ class ProspectorTest < Minitest::Test
     prng = Random.new(15)
     pros = Prospector.new 1, prng
     map = Map.new
-    20.times do
+    200.times do
       actual = pros.get_ran_gold map.cities[3].id, prng, map.cities[3].max_gold
       assert_operator 3, :>=, actual
       assert_operator 0, :<=, actual
@@ -182,7 +182,7 @@ class ProspectorTest < Minitest::Test
     prng = Random.new(15)
     pros = Prospector.new 1, prng
     map = Map.new
-    20.times do
+    200.times do
       actual = pros.get_ran_silver map.cities[3].id, prng, map.cities[3].max_sliver
       assert_operator 3, :>=, actual
       assert_operator 0, :<=, actual
@@ -194,7 +194,7 @@ class ProspectorTest < Minitest::Test
     prng = Random.new(15)
     pros = Prospector.new 1, prng
     map = Map.new
-    20.times do
+    200.times do
       actual = pros.get_ran_silver map.cities[5].id, prng, map.cities[5].max_sliver
       assert_operator 5, :>=, actual
       assert_operator 0, :<=, actual
@@ -206,7 +206,7 @@ class ProspectorTest < Minitest::Test
     prng = Random.new(15)
     pros = Prospector.new 1, prng
     map = Map.new
-    20.times do
+    200.times do
       actual = pros.get_ran_silver map.cities[6].id, prng, map.cities[6].max_sliver
       assert_operator 10, :>=, actual
       assert_operator 0, :<=, actual

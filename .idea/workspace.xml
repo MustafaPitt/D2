@@ -6,10 +6,9 @@
       <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gold_rush.rb" beforeDir="false" afterPath="$PROJECT_DIR$/gold_rush.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.rb" beforeDir="false" afterPath="$PROJECT_DIR$/map.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prospector.rb" beforeDir="false" afterPath="$PROJECT_DIR$/prospector.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prospector_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/prospector_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rules.rb" beforeDir="false" afterPath="$PROJECT_DIR$/rules.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/rules_test.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,27 +80,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="rb" value="23600" />
+          <entry key="rb" value="23857" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Ruby" value="23600" />
+          <entry key="Ruby" value="23857" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="1" />
-          <entry key="rb" value="50" />
+          <entry key="rb" value="51" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="Ruby" value="50" />
+          <entry key="Ruby" value="51" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -124,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prospector_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="28">
+              <caret line="82" column="3" lean-forward="true" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -133,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+            <state relative-caret-position="399">
+              <caret line="85" column="17" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -160,26 +159,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rules_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rules.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" selection-start-line="26" selection-end-line="32" />
+            <state relative-caret-position="413">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rules.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gold_rush.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="55" column="56" lean-forward="true" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+            <state relative-caret-position="1181">
+              <caret line="146" selection-start-line="146" selection-end-line="146" />
             </state>
           </provider>
         </entry>
@@ -187,8 +186,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prospector.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="292" lean-forward="true" selection-start-line="292" selection-end-line="292" />
+            <state relative-caret-position="12">
+              <caret line="212" column="33" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -224,6 +223,8 @@
       <find>has_to</find>
       <find>count_days</find>
       <find>city_id</find>
+      <find>get_start_msg</find>
+      <find>times</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -240,15 +241,15 @@
         <option value="$PROJECT_DIR$/city.rb" />
         <option value="$PROJECT_DIR$/city_test.rb" />
         <option value="$PROJECT_DIR$/map_test.rb" />
-        <option value="$PROJECT_DIR$/prospector_test.rb" />
         <option value="$PROJECT_DIR$/ruby_gold_rush.rb" />
         <option value="$PROJECT_DIR$/all_tests.rb" />
         <option value="$PROJECT_DIR$/gold_rush_test.rb" />
-        <option value="$PROJECT_DIR$/rules.rb" />
-        <option value="$PROJECT_DIR$/map.rb" />
         <option value="$PROJECT_DIR$/rules_test.rb" />
+        <option value="$PROJECT_DIR$/prospector_test.rb" />
+        <option value="$PROJECT_DIR$/map.rb" />
         <option value="$PROJECT_DIR$/prospector.rb" />
         <option value="$PROJECT_DIR$/gold_rush.rb" />
+        <option value="$PROJECT_DIR$/rules.rb" />
       </list>
     </option>
   </component>
@@ -375,22 +376,22 @@
       <workItem from="1539969787415" duration="16030000" />
       <workItem from="1539991307448" duration="60042000" />
       <workItem from="1540242999191" duration="12373000" />
-      <workItem from="1540342497094" duration="823000" />
+      <workItem from="1540342497094" duration="11916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164553000" />
+    <option name="totallyTimeSpent" value="175646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.45424837" visible="true" weight="0.10403985" />
-      <window_info id="Structure" order="1" sideWeight="0.54575163" side_tool="true" visible="true" weight="0.10403985" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8391039" visible="true" weight="0.26286662" />
+      <window_info id="Structure" order="1" sideWeight="0.16089614" side_tool="true" visible="true" weight="0.26286662" />
       <window_info id="Run" order="2" sideWeight="0.3952569" side_tool="true" weight="0.32982844" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997233" weight="0.32681242" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997233" weight="0.32575756" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -399,7 +400,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.32792208" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.7089098" visible="true" weight="0.66883117" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.7089098" visible="true" weight="0.46861473" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.2910902" side_tool="true" weight="0.47402596" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.63420033" weight="0.5649351" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -536,27 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/city_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prospector_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/map_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -571,31 +551,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rules_test.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs25/open_ssl.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+        <state relative-caret-position="217">
+          <caret line="4918" column="16" selection-start-line="4918" selection-start-column="16" selection-end-line="4918" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rules.rb">
+    <entry file="file://$PROJECT_DIR$/prospector_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" selection-start-line="26" selection-end-line="32" />
+        <state relative-caret-position="28">
+          <caret line="82" column="3" lean-forward="true" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prospector.rb">
+    <entry file="file://$PROJECT_DIR$/city_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="292" lean-forward="true" selection-start-line="292" selection-end-line="292" />
+        <state relative-caret-position="90">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="85" column="17" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gold_rush.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="55" column="56" lean-forward="true" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+        <state relative-caret-position="1181">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rules_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prospector.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="212" column="33" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rules.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
         </state>
       </provider>
     </entry>

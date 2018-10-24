@@ -5,48 +5,30 @@ require_relative 'rules'
 # 1632 CS PITT --D2 -- Prof. Bill Laboon
 # Author: Mustafa Al Azzawi
 
-# start main her
-
-rule = Rules.new
-rule.check_args ARGV[0], ARGV[1]
-
-seed = ARGV[0].to_i
-numb_of_pros = ARGV[1].to_i
-
-prng = Random.new seed
-
-pross = []
-
-map = Map.new
-
 
 def first_3_cities(id, map, prng, pross)
   # get the id of Sutter Creek to make the prospector start with
-  c_indx = 2
+  c_indx  = pross[id].city_id
   # for each prospector visit three cities
   until pross[id].visited_num >= 3
     # set the start city for each prospector as Sutter Creek
     #
     pross[id].current_city = map.cities[c_indx].name
-    city_id = map.cities[c_indx].id
-
+    pross[id].city_id = map.cities[c_indx].id
     #
-    # print start message
-    puts pross[id].get_start_msg pross[id].current_city, pross[id].pros_id
     # search in the current city until you find no precious metals
     until pross[id].has_to_leave == true
       # Counting days in the current city
       pross[id].increment_count_days
       # get random value for gold
-      curr_gold = pross[id].get_ran_gold city_id, prng, map.cities[c_indx].max_gold
+      curr_gold = pross[id].get_ran_gold pross[id].city_id, prng, map.cities[c_indx].max_gold
       # get random value for silver
-      cur_silver = pross[id].get_ran_silver city_id, prng, map.cities[c_indx].max_gold
+      cur_silver = pross[id].get_ran_silver pross[id].city_id, prng, map.cities[c_indx].max_gold
       # print message for current metals found
-      puts pross[id].search_msg_first_3_ir pross[id].current_city, curr_gold, cur_silver
+      puts pross[id].get_msg_search__first_3_ir pross[id].current_city, curr_gold, cur_silver
       # collect the metals
       # add the metals to the instance class @total silver and gold #
-      pross[id].collect_metals curr_gold, cur_silver, pross[id].has_to_leave
-      #
+      pross[id].collect_metals curr_gold, cur_silver
 
     end
     # find another destination to go
@@ -83,8 +65,7 @@ def final_2_cities(id, map, prng, pross)
     # set the start city for each prospector as Sutter Creek
     pross[id].current_city = map.cities[c_indx].name
     city_id = map.cities[c_indx].id
-    # print start message
-    puts pross[id].get_start_msg pross[id].current_city, pross[id].pros_id
+
     # search in the current city until you find no precious metals
     until pross[id].has_to_leave == true
       #
@@ -98,7 +79,7 @@ def final_2_cities(id, map, prng, pross)
       puts pross[id].search_for_gold_or_silver_final_2 pross[id].current_city, curr_gold, cur_silver
       # collect the metals
       # add the metals to the instance class variables @total silver and gold
-      pross[id].collect_metals curr_gold, cur_silver, pross[id].has_to_leave
+      pross[id].collect_metals curr_gold, cur_silver
 
       #
     end
@@ -118,18 +99,37 @@ def final_2_cities(id, map, prng, pross)
     unless pross[id].has_to_leave
     puts pross[id].move_msg map.cities[temp_inx].name, map.cities[c_indx].name, pross[id].t_gold, pross[id].t_silver
     end
-    # incrument the visited city
+    # increment the visited city
     #
     pross[id].increment_visit
-
     # set has to leave to false so he can search again
     pross[id].has_to_leave = false
   end
 end
 
-numb_of_pros.times do |id|
 
+# start main her
+
+rule = Rules.new
+rule.check_args ARGV[0], ARGV[1]
+
+seed = ARGV[0].to_i
+numb_of_pros = ARGV[1].to_i
+
+prng = Random.new seed
+
+pross = []
+
+map = Map.new
+
+numb_of_pros.times do |id|
+  # make prospector id start with 1
+  id +=1
   pross[id] = Prospector.new id, prng
+
+  # print prospector starting message
+
+ puts pross[id].get_start_msg pross[id].current_city, id
 
   # pass a prospectors starting with  id = 0 to the search in first 3 cities
   first_3_cities(id, map, prng, pross)
@@ -144,7 +144,3 @@ numb_of_pros.times do |id|
   # days, pros_id, t_gold, t_silver, cash
   pross[id].back_home_msg pross[id].count_days,id, pross[id].t_gold, pross[id].t_silver, cash
 end
-
-
-
-

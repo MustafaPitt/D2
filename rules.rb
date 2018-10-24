@@ -7,9 +7,12 @@ class Rules
   def check_args (seed, number_of_pros)
     if  ARGV.count != 2
       print invalid_msg
-      exit 1
+      exit(1)
     end
-    print invalid_msg if has_letter_or_symbol seed, number_of_pros
+   if has_letter_or_symbol seed, number_of_pros
+     print invalid_msg
+     exit(1)
+   end
   end
 
 

@@ -85,7 +85,7 @@ class Prospector
   # when there is no gold or silver ==> when  both are equal 0
   # this method for the first 3 irritation
 
-  def search_msg_first_3_ir(city, gold, silver)
+  def get_msg_search__first_3_ir(city, gold, silver)
     #
     # case 1 when there is no gold and silver
     # the method will print Found no precious metals in #{city}."
@@ -183,9 +183,10 @@ class Prospector
   # # print when both gold and silver are > 0
   def get_sing_plur_silver_gold_msg(city, max_gold, max_silver)
     # print message for gold
-    get_sing_plur_gold_msg city, max_gold
+    str1 = get_sing_plur_gold_msg city, max_gold
     # get message for silver
-    get_sing_plur_silver_msg city, max_silver
+    str2 = get_sing_plur_silver_msg city, max_silver
+    str1 +  str2
   end
 
   #
@@ -270,11 +271,9 @@ class Prospector
     "Heading from #{cur_city} to #{dest_city}, holding #{g_earned} ounce of gold and #{sil_earned} ounces of silver.\n"
   end
 
-  def collect_metals(gold, silver, has_to_leave)
-    unless has_to_leave
+  def collect_metals(gold, silver)
       @t_gold += gold
       @t_silver += silver
-    end
   end
 
   def back_home_msg(days, pros_id, t_gold, t_silver, cash)
