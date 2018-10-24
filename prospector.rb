@@ -25,7 +25,19 @@ class Prospector
 
   # @return [visited_num]
   attr_reader :visited_num
+  # @return [total gold]
+  attr_reader :t_gold
 
+  # @return [total silver]
+  attr_reader :t_silver
+
+  attr_writer :current_city
+
+  attr_writer :has_to_leave
+
+  attr_reader :count_days
+
+  attr_accessor :city_id
 
   def initialize(id, prng)
     @has_to_leave = false
@@ -35,14 +47,27 @@ class Prospector
     # Total silver and total gold is to trace the total amount of metals
     # that prospector can earn
 
-    @total_silver = 0
-    @total_gold = 0
+    @t_silver = 0
+    @t_gold = 0
     @prng = prng
 
     # save and truck number of visited city
     @visited_num = 0
     # is the current city that prospector in
     @current_city = 'Sutter Creek'
+    # city id of sutter Creek is 2
+    @city_id = 2
+
+    @count_days = 0
+
+  end
+
+  def increment_count_days
+    @count_days +=1
+  end
+
+  def increment_visit
+    @visited_num += 1
   end
 
   # start method will return the start message about which
@@ -70,7 +95,7 @@ class Prospector
       @has_to_leave = true
       return "Found no precious metals in #{city}.\n"
     end
-    #
+
     # case 2: checking if there is gold, but no silver
     # print the appropriated message singular or plural
     #
@@ -234,7 +259,34 @@ class Prospector
     print 'Error index ID not found in the System \n'
   end
 
+  def get_another_id(prng, max_con)
+    # max_con is max_con is equal to max array length of connections
+    # each instance of class city has connections array and this array contains the
+    # references to the other cities
+    prng.rand(max_con)
+  end
+
   def move_msg(cur_city, dest_city, g_earned, sil_earned)
     "Heading from #{cur_city} to #{dest_city}, holding #{g_earned} ounce of gold and #{sil_earned} ounces of silver.\n"
   end
+
+  def collect_metals(gold, silver, has_to_leave)
+    unless has_to_leave
+      @t_gold += gold
+      @t_silver += silver
+    end
+  end
+
+  def back_home_msg(days, pros_id, t_gold, t_silver, cash)
+    puts "After #{days} days, Prospector #{pros_id} returned to San Francisco with:"
+	  puts  "#{t_gold} ounces of gold."
+	  puts "#{t_silver} ounces of silver."
+    puts "Heading home with $#{cash}."
+  end
+
+  def convert_metals_to_cash(gold, silver)
+     cash =  (gold * 20.67) + (silver * 1.31)
+     cash.round(2)
+  end
+
 end

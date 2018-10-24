@@ -18,7 +18,7 @@ class Map
   # @cities[6] = El Dorado Canyon
   #
   def initialize()
-    @cities = Array.new(NUM_CITIES)
+    @cities = Array.new()
     @cities[0]  = City.new('Nevada City', 0)
     @cities[1]  = City.new('Angels Camp', 1)
     @cities[2]  = City.new('Sutter Creek', 2)
