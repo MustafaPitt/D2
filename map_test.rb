@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require_relative 'city'
 require_relative 'map'
+# Testing MapTest
 class MapTest < Minitest::Test
   # check connections map. Each city has a valid road to its neighbouring
   # cities matching by matching the map in requirements.
@@ -15,21 +16,22 @@ class MapTest < Minitest::Test
   # @cities[5] = midas
   # @cities[6] = El Dorado Canyon
 
+  # UNIT TESTS FOR METHOD connect_nevada_with_other(cities)
   # test Nevada City on index cities[0] which it has an array of connections
   # has a connection at connections[0] index connected with Angels Camp
+
   def test_nevada_connections
-    prng = Random.new(10)
     map = Map.new
     # checking connection by name
     assert_equal 'Angels Camp', map.cities[0].connections[0].name
     # checking connection by ID of Angel Camp
     assert_equal 1, map.cities[0].connections[0].id
   end
-
-  # test Angel camp city in index @cities[1] has an array of connections
+  # UNIT TESTS FOR METHOD connect_angels_with_other(cities)
+  # Angel camp city in index @cities[1] has an array of connections
   # with Nevada, Sutter Creek and Virginia City.
+
   def test_angel_camp_connections
-    prng = Random.new(10)
     map = Map.new
     # checking if Angel camp on index @cities[1]
     # is connected with......
@@ -56,4 +58,15 @@ class MapTest < Minitest::Test
     assert_equal 3, map.cities[1].connections[2].id
   end
 
+  # UNIT TESTS FOR METHOD connect_sutter_with_other(cities)
+  #  Angel camp city in index @cities[2] has an array of connections
+  #  # with Coloma and Angel Camps
+  #
+  def test_connect_sutter
+    map = Map.new
+    # testing connect with Coloma
+    assert_equal 4, map.cities[2].connections[1].id
+    # testing connect angel camp
+    assert_equal 1, map.cities[2].connections[0].id
+  end
 end

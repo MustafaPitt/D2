@@ -9,23 +9,23 @@ class Map
 
   # Initialize map with array @cities contains objects of class
   # city and save them as the following
-  # @cities[0] = Nevada City
-  # @cities[1] = Angels Camp
-  # @cities[2] = Sutter Creek
-  # @cities[3] = Virginia City
-  # @cities[4] = Coloma
-  # @cities[5] = midas
-  # @cities[6] = El Dorado Canyon
-  #
-  def initialize()
-    @cities = Array.new()
-    @cities[0]  = City.new('Nevada City', 0)
-    @cities[1]  = City.new('Angels Camp', 1)
-    @cities[2]  = City.new('Sutter Creek', 2)
-    @cities[3]  = City.new('Virginia City', 3)
-    @cities[4]  = City.new('Coloma', 4)
-    @cities[5]  = City.new('Midas', 5)
-    @cities[6]  = City.new('El Dorado Canyon', 6)
+  # @cities[0] = Nevada City        |max_s =  0 |max_g = 5
+  # @cities[1] = Angels Camp        |max_s =  0 |max_g = 4
+  # @cities[2] = Sutter Creek       |max_s =  0 |max_g = 2
+  # @cities[3] = Virginia City      |max_s =  3 |max_g = 3
+  # @cities[4] = Coloma             |max_s =  0 |max_g = 3
+  # @cities[5] = midas              |max_s =  5 |max_g = 0
+  # @cities[6] = El Dorado Canyon   |max_s = 10 |max_g = 0
+
+  def initialize
+    @cities = []
+    @cities[0]  = City.new('Nevada City', 0, 0, 5)
+    @cities[1]  = City.new('Angels Camp', 1, 0, 4)
+    @cities[2]  = City.new('Sutter Creek', 2, 0, 2)
+    @cities[3]  = City.new('Virginia City', 3, 3, 3)
+    @cities[4]  = City.new('Coloma', 4, 0, 3)
+    @cities[5]  = City.new('Midas', 5, 5, 0)
+    @cities[6]  = City.new('El Dorado Canyon', 6, 10, 0)
     connect_cities @cities
   end
 
@@ -50,17 +50,6 @@ class Map
     connect_midas_with_other cities
     # Connect El Dorado Canyon with Midas and Virginia City.
     connect_eldorado_with_other cities
-  end
-
-  # print all cities by passing the array of cities which contain the references
-  # of all cities classes
-  def print_map
-    puts 'Location           | Max Silver    | Max Gold'
-    puts '----------------------------------------------'
-    @cities.length.times do |i|
-      @cities[i].to_s
-      puts
-    end
   end
 
   # connect Nevada with Angels Camp

@@ -10,18 +10,16 @@
 #    @cities[4] = Coloma
 #    @cities[5] = midas
 #    @cities[6] = El Dorado Canyon
-#
-#
 class Prospector
   # @return [prod_id]
   attr_reader :pros_id
 
   # the prospector has leave the city if it's true
 
+  # @return [current_city] it's a reference to object city
+  attr_accessor :current_city
 
-  # @return [current_city]
-  attr_reader :current_city
-
+  # use to count how many cities are visited
   # @return [visited_num]
   attr_reader :visited_num
   # @return [total gold]
@@ -30,12 +28,10 @@ class Prospector
   # @return [total silver]
   attr_reader :t_silver
 
-  attr_writer :current_city
-
+  # use to count how many days that each prospector spends in a city
   attr_reader :count_days
 
   attr_accessor :has_to_leave
-
 
   def initialize(id, prng)
     @has_to_leave = false
@@ -56,11 +52,10 @@ class Prospector
     @visited_num = 0
     # city id of sutter Creek is 2
     @count_days = 0
-
   end
 
   def increment_count_days
-    @count_days +=1
+    @count_days += 1
   end
 
   def increment_visit
@@ -127,11 +122,9 @@ class Prospector
     # when gold <= 1 and silver <= 2
     # set has to leave as true
     @has_to_leave = true if gold <= 1 && silver <= 2
-      # contains the the amount of metals found
-      return handle_and_get_final_2_msg city, gold, silver
-    raise "Error in search for gold or silver\n"
+    # contains the the amount of metals found
+    handle_and_get_final_2_msg city, gold, silver
   end
-
 
   # These 2 print methods below simply will print the appropriate message if
   # the sentence singular, it will print with ounce, else it will print ounces
@@ -159,10 +152,9 @@ class Prospector
     str1 = get_sing_plur_gold_msg city, max_gold
     # get message for silver
     str2 = get_sing_plur_silver_msg city, max_silver
-    str1 +  str2
+    str1 + str2
   end
 
-  #
   # this method will print found gold or silver with ounces amount and print
   # the appropriate message. It's for the final 2 irritation. We'll use it when
   # the max gold <= 1 and Max_silver <= 2
@@ -233,6 +225,7 @@ class Prospector
     print 'Error index ID not found in the System \n'
   end
 
+  # get another city id  randomly
   def get_another_id(prng, max_con)
     # max_con is max_con is equal to max array length of connections
     # each instance of class city has connections array and this array contains the
@@ -245,20 +238,21 @@ class Prospector
   end
 
   def collect_metals(gold, silver)
-      @t_gold += gold
-      @t_silver += silver
+    @t_gold += gold
+    @t_silver += silver
   end
 
   def back_home_msg(days, pros_id, t_gold, t_silver, cash)
     puts "After #{days} days, Prospector #{pros_id} returned to San Francisco with:"
-	  puts  "#{t_gold} ounces of gold."
-	  puts "#{t_silver} ounces of silver."
+    puts "#{t_gold} ounces of gold."
+    puts "#{t_silver} ounces of silver."
     puts "Heading home with $#{cash}."
   end
 
   def convert_metals_to_cash(gold, silver)
-     cash =  (gold * 20.67) + (silver * 1.31)
-     cash.round(2)
-  end
+    raise 'ERROR : non positive integer for gold or silver' unless gold >= 0 && silver >= 0
 
+    cash = (gold * 20.67) + (silver * 1.31)
+    cash.round(2)
+  end
 end

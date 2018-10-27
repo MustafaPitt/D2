@@ -4,58 +4,151 @@ require 'minitest/autorun'
   # testing Rules class
 
 class RulesTest < Minitest::Test
-  # TESTING has_letter_or_symbol
-  # has letter or symbol method should return true if
-  # the input contains any char letters from [a-z],[A-Z]
-  # or !@#$%^&*()-+... et
-  #
-  def test_string_input
-    set_rule = Rules.new
-    actual = set_rule.has_letter_or_symbol 'BB', 'AB'
-    expected = true
-    assert_equal expected, actual
-  end
 
-  # test input with string and digit
-  #
-  def test_symbol_input
-    set_rule = Rules.new
-    actual = set_rule.has_letter_or_symbol '#', '$'
-    expected = true
-    assert_equal expected, actual
-  end
 
-  # test_float_number
-  def test_float_string
-    set_rule = Rules.new
-    actual = set_rule.has_letter_or_symbol '1.23', '-156'
-    expected = true
-    assert_equal expected, actual
-  end
+  # UNIT TESTS FOR METHOD pos_int?(input)
+  # Equivalence classes:
+  # input = 0..INFINITY -> returns true
+  # input = -INFINITY..-1 -> returns false
+  # input = (not a number) -> returns false
 
-  # test if integer end with chars
-
-  def test_integer_end_with_char
-    set_rule = Rules.new
-    actual = set_rule.has_letter_or_symbol '156LK', '156FD'
-    expected = true
-    assert_equal expected, actual
-  end
-
-  # edge case testing empty string
-
-  def test_empty_string
-    set_rule = Rules.new
-    actual = set_rule.has_letter_or_symbol '', ''
-    expected = true
-    assert_equal expected, actual
-  end
-
-  # test integer string should return false
-  def test_integer_string
-    set_rule = Rules.new
-    actual = set_rule.has_letter_or_symbol '156', '156'
+  # If a negative value is given for input , then false is returned.
+  def test_negative_val
+    set_rules = Rules::new
+    input = '-11'
+    actual = set_rules.pos_int? input
     expected = false
     assert_equal expected, actual
   end
+
+  # If a positive value is given for input , then true is returned.
+  def test_positive_val
+    set_rule = Rules.new
+    actual = set_rule.pos_int? '4654'
+    expected = true
+    assert_equal expected, actual
+  end
+
+  # if invalid value, such as string, is given for input then false is returned
+  # EDGE CASE
+  def test_invalid_val
+    set_rule = Rules.new
+    actual = set_rule.pos_int? 'quack'
+    expected = false
+    assert_equal expected, actual
+  end
+
+
+  # if invalid value, such as float number , is given for input then false is returned
+  # test_float_number
+  # # EDGE CASE
+  def test_float_val
+    set_rule = Rules.new
+    actual = set_rule.pos_int? '1.2'
+    expected = false
+    assert_equal expected, actual
+  end
+
+  # UNIT TESTS FOR METHOD pos_neg_int?(input)
+  # Equivalence classes:
+  # input =  -INFINITY.. +INFINITY -> returns true
+  # input = (not a number) -> returns false
+
+  # If a negative value is given for input , then false is returned.
+  def test_neg_val
+    set_rules = Rules::new
+    input = '-11'
+    actual = set_rules.pos_neg_int? input
+    expected = true
+    assert_equal expected, actual
+  end
+  # If a positive value is given for input , then true is returned.
+  def test_pos_val
+    set_rule = Rules.new
+    actual = set_rule.pos_int? '4654'
+    expected = true
+    assert_equal expected, actual
+  end
+
+  # If a invalid value is given for input , then false is returned.
+  # EDGE CASE
+  def test_invalid_val_symbol
+    set_rule = Rules.new
+    actual = set_rule.pos_int? '-'
+    expected = false
+    assert_equal expected, actual
+  end
+
+  # UNIT TESTS FOR METHOD valid_input(seed, number_of_pros )
+  # Equivalence classes:
+  # seed = -INFINITY..+INFINITY  AND number_of_pros [0 -- +INFINITY] => returns true
+  # Seed NOT [-INFINITY..+INFINITY] OR number_of_pros NOT [0 -- +INFINITY] =>false
+
+  # input = (not a number) -> returns false
+
+  # if seed is positive and number of prospectors are positive, then true returned
+  def test_pos_seed_pos_pros
+    set_rule = Rules.new
+    actual = set_rule.valid_input? '123','453'
+    expected = true
+    assert_equal expected, actual
+  end
+  # if seed is negative and number of prospectors are positive, then true returned
+  def test_neg_seed_pos_pros
+    set_rule = Rules.new
+    actual = set_rule.valid_input? '-123','453'
+    expected = true
+    assert_equal expected, actual
+  end
+  # if seed is negative and number of prospectors is negative, then false returned
+  def test_neg_seed_neg_pros
+    set_rule = Rules.new
+    actual = set_rule.valid_input? '-123','-453'
+    expected = false
+    assert_equal expected, actual
+  end
+
+  # if seed is negative and number of prospectors is negative, then false returned
+  def test_pros_seed_invalid
+    set_rule = Rules.new
+    actual = set_rule.valid_input? '-323','123A'
+    expected = false
+    assert_equal expected, actual
+  end
+
+
+  # UNIT TESTS FOR METHOD first_3_cities(id, prng, pross)
+  # The method should stop after visit 3 cities
+
+  def test_first_3_cities
+    map = Map.new
+    set_rule = Rules.new
+    prng = Random.new 12
+    id =0
+    prospectors =[]
+    prospectors[id] = Prospector.new id, prng
+    prospectors[id].current_city = map.cities[2]
+
+    set_rule.first_3_cities id, prng,prospectors
+
+    assert_equal 3 ,prospectors[id].visited_num
+
+  end
+  # UNIT TESTS FOR METHOD final_2_cities(id, prng, pross)
+  # The method should stop after visit 5 cities
+
+  def test_final_2_cities
+    map = Map.new
+    set_rule = Rules.new
+    prng = Random.new 12
+    id =0
+    prospectors =[]
+    prospectors[id] = Prospector.new id, prng
+    prospectors[id].current_city = map.cities[2]
+
+    set_rule.final_2_cities id, prng,prospectors
+    assert_equal 5 ,prospectors[id].visited_num
+
+  end
+
 end
